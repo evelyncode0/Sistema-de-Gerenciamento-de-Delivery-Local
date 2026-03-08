@@ -1,37 +1,38 @@
 public class Main {
     public static void main(String[] args) {
-        //primeiro restaurannte
-        Restaurante r1 = new Restaurante();
-        r1.nome = "Frango frito mineiro";
-        r1.endereco = "Centro, 154";
-        r1.categoria = "Frango";
+        //criando sistema
+        SistemaDelivery sistema = new SistemaDelivery();
 
+
+        //primeiro restaurannte
+        Restaurante r1 = new Restaurante("Pizza top" , "Rua das aguas" , "Pizza");
+       
         //segundo restaurante
-        Restaurante r2 = new Restaurante();
-        r2.nome = "Casa da goiaba";
-        r2.endereco = "Centro, 999";
-        r2.categoria = "Sorvete e pizza";
+        Restaurante r2 = new Restaurante("Emporio da carne" , "Rua esquina", "Churrasco");
+
+        //teste de validação
+        Restaurante r3 = new Restaurante(null, null, null);
+
+       
 
         // //exibindo os dados
         // r1.exibirDados();
         // r2.exibirDados();
 
         //criando primeiro cliente
-        Cliente c1 = new Cliente();
-        c1.nome = "Maria";
-        c1.telefone = "9898-0055";
+        Cliente c1 = new Cliente("Evelyn" , "3599990000");
+       
+        Cliente c2 = new Cliente("Maria" , "3500003555");
 
-        Cliente c2 = new Cliente();
-        c2.nome = "Jonas";
-        c2.telefone = "5500-6677";
+        //teste de validação
+        Cliente c3 = new Cliente(null, null);
+        
+        sistema.adicionarPedido(c2, r2, 50);
+        sistema.adicionarPedido(c1, r1, 90);
 
-        //criando sistema
-        SistemaDelivery sistema = new SistemaDelivery();
-
-        //criando pedido
-        sistema.criarPedido(c1, r1, 50.0);
-        sistema.criarPedido(c2, r2, 80.0);
-
+        sistema.adicionarPedido(c3, r3, -120);
+       
+       
         //listando os pedidos
         sistema.listarPedidos();
     }
