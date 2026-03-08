@@ -1,4 +1,4 @@
-# Sistema de Delivery – Projeto em Java
+# Sistema de Delivery – Projeto em Java ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
 Este projeto apresenta uma implementação simples de um sistema de delivery desenvolvido em **Java**, com o objetivo de aplicar e consolidar os conceitos fundamentais da **Programação Orientada a Objetos (POO)**.
 
