@@ -12,9 +12,28 @@ public class Main {
         r2.endereco = "Centro, 999";
         r2.categoria = "Sorvete e pizza";
 
-        //exibindo os dados
-        r1.exibirDados();
-        r2.exibirDados();
+        // //exibindo os dados
+        // r1.exibirDados();
+        // r2.exibirDados();
+
+        //criando primeiro cliente
+        Cliente c1 = new Cliente();
+        c1.nome = "Maria";
+        c1.telefone = "9898-0055";
+
+        Cliente c2 = new Cliente();
+        c2.nome = "Jonas";
+        c2.telefone = "5500-6677";
+
+        //criando sistema
+        SistemaDelivery sistema = new SistemaDelivery();
+
+        //criando pedido
+        sistema.criarPedido(c1, r1, 50.0);
+        sistema.criarPedido(c2, r2, 80.0);
+
+        //listando os pedidos
+        sistema.listarPedidos();
     }
     
 }
